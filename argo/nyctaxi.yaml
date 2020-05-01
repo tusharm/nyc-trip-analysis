@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: arc-
+spec:
+  entrypoint: arc
+  templates:
+  - name: arc
+    dag:
+      tasks:
+        - name: arc
+          templateRef:
+            name: arc
+            template: arcClient
+          arguments:
+            parameters:
+            - name: configUri
+              value: local:///app/arc/nyctaxi.ipynb
+            - name: parameters
+              value: "--ETL_BASE=/app"
