@@ -153,3 +153,5 @@ docs/_build/
 
 data/
 output/
+
+.ipynb_checkpoints/
