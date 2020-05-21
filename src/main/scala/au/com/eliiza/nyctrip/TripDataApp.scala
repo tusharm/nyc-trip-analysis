@@ -19,9 +19,7 @@ object TripDataApp {
     // extract trip data from CSV
     val rawTripDF = spark.read.option("header", true).csv(args(0))
     rawTripDF.persist
-    rawTripDF.printSchema
     rawTripDF.show(10, 40, false)
-
 
     // rename columns, assign types etc.
     val tripDF = rawTripDF.select(

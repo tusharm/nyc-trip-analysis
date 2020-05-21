@@ -150,8 +150,6 @@ docs/_build/
 .env
 *~
 
-
-data/
 output/
 
 .ipynb_checkpoints/
