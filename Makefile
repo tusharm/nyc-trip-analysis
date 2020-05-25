@@ -34,6 +34,7 @@ docker-submit:
 		/opt/spark/jars/trip.jar "${TARGET}"
 
 docker-build: assembly
+	test -n "$(TAG)" && \
 	docker build -t tusharm/nyc-taxi:${TAG} .
 
 arc-dev:

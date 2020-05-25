@@ -11,7 +11,6 @@ object TripDataApp {
 
     // create Spark session
     val spark = SparkSession.builder
-      .master("local")
       .appName("NYC Trip Data")
       .getOrCreate
 
